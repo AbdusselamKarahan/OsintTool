@@ -5,11 +5,11 @@
 A powerful web reconnaissance tool that helps security researchers and penetration testers gather information about web applications. OsintTool combines multiple scanning capabilities into a user-friendly interface.
 
 
-## 🎥 Video Tanıtımı
+## 🎥 PoC
 
 [![OsintTool Demo](https://img.youtube.com/vi/o6gRTMPLvd4/0.jpg)](https://www.youtube.com/watch?v=o6gRTMPLvd4)
 
-👉 Tıklayarak YouTube üzerinden izleyin!!!
+👉 Click the link to watch 
 
 ---
 
