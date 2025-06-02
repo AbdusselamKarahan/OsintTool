@@ -1,4 +1,4 @@
-# Osint Ninja 🔍
+# Osint Ninja 🥷
 
 ![OsintTool Banner](static/background.png)
 
