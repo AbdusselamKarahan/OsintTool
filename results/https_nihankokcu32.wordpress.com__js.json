@@ -1,0 +1,259 @@
+{
+    "target": "https://nihankokcu32.wordpress.com/",
+    "js_files": [
+        "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/dom-ready/index.min.js?m=1744959081i&ver=222ad38e3e5e302c8bbf",
+        "https://s2.wp.com/_static/??/wp-includes/js/dist/vendor/wp-polyfill.min.js,/wp-content/mu-plugins/jetpack-plugin/moon/_inc/blocks/subscriptions/view.js,/wp-content/js/rlt-proxy.js?m=1745439353j",
+        "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/hooks/index.min.js?m=1744959081i&ver=84e753e2b66eb7028d38",
+        "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/i18n/index.min.js?m=1744959081i&ver=bd5a2533e717a1043151",
+        "https://s1.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build-module/block-library/navigation/view.min.js?ver=38dd13322236f359c8a9",
+        "https://0.gravatar.com/js/hovercards/hovercards.min.js?ver=20252317d2298fc173af206bd9f65440008ab9e1ee2bd896241083289a9e27bd0efc7c",
+        "https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i",
+        "https://s1.wp.com/wp-content/js/mobile-useragent-info.js?m=1609849039i&ver=20241018",
+        "https://s1.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/jetpack_vendor/automattic/jetpack-assets/build/i18n-loader.js?m=1725888675i",
+        "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/url/index.min.js?m=1744959081i&ver=1203626ff9ccb36dc17c",
+        "https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/jetpack_vendor/automattic/jetpack-search/build/instant-search/jp-search.js?m=1747071560i",
+        "https://stats.wp.com/w.js?ver=202523",
+        "https://stats.wp.com/w.js?68",
+        "https://nihankokcu32.wordpress.com/wp-content/js/bilmur-4.min.js?i=13&m=202523"
+    ],
+    "analysis": [
+        {
+            "file_url": "inline_script",
+            "content": "\n\t\t/* <![CDATA[ */\n\t\tfunction addLoadEvent(func) {\n\t\t\tvar oldonload = window.onload;\n\t\t\tif (typeof window.onload != 'function') {\n\t\t\t\twindow.onload = func;\n\t\t\t} else {\n\t\t\t\twindow.onload = function () {\n\t\t\t\t\toldonload();\n\t\t\t\t\tfunc();\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t/* ]]> */\n\t",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s0.wp.com\\/wp-content\\/mu-plugins\\/wpcom-smileys\\/twemoji\\/2\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s0.wp.com\\/wp-content\\/mu-plugins\\/wpcom-smileys\\/twemoji\\/2\\/svg\\/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https:\\/\\/s1.wp.com\\/wp-includes\\/js\\/wp-emoji-release.min.js?m=1743601627i&ver=6.8.1-alpha-60199\"}};\n/*! This file is auto-generated */\n!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case\"flag\":return n(e,\"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\",\"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\")?!1:!n(e,\"\\ud83c\\uddfa\\ud83c\\uddf3\",\"\\ud83c\\uddfa\\u200b\\ud83c\\uddf3\")&&!n(e,\"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\",\"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");case\"emoji\":return!n(e,\"\\ud83d\\udc26\\u200d\\ud83d\\udd25\",\"\\ud83d\\udc26\\u200b\\ud83d\\udd25\")}return!1}function f(e,t,n){var r=\"undefined\"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement(\"canvas\"),a=r.getContext(\"2d\",{willReadFrequently:!0}),o=(a.textBaseline=\"top\",a.font=\"600 32px Arial\",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement(\"script\");t.src=e,t.defer=!0,i.head.appendChild(t)}\"undefined\"!=typeof Promise&&(o=\"wpEmojiSettingsSupports\",s=[\"flag\",\"emoji\"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener(\"DOMContentLoaded\",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if(\"object\"==typeof e&&\"number\"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&\"object\"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if(\"undefined\"!=typeof Worker&&\"undefined\"!=typeof OffscreenCanvas&&\"undefined\"!=typeof URL&&URL.createObjectURL&&\"undefined\"!=typeof Blob)try{var e=\"postMessage(\"+f.toString()+\"(\"+[JSON.stringify(s),u.toString(),p.toString()].join(\",\")+\"));\",r=new Blob([e],{type:\"text/javascript\"}),a=new Worker(URL.createObjectURL(r),{name:\"wpTestEmojiSupports\"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],\"flag\"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nvar Jetpack_Block_Assets_Base_Url=\"https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/_inc/blocks/\";\n",
+            "endpoints": [
+                "https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/_inc/blocks/"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nvar JETPACK_MU_WPCOM_SETTINGS = {\"assetsUrl\":\"https:\\/\\/s1.wp.com\\/wp-content\\/mu-plugins\\/jetpack-mu-wpcom-plugin\\/moon\\/jetpack_vendor\\/automattic\\/jetpack-mu-wpcom\\/src\\/build\\/\"};\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n\trltInitialize( {\"token\":null,\"iframeOrigins\":[\"https:\\/\\/widgets.wp.com\"]} );\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nwp.i18n.setLocaleData( { 'text direction\\u0004ltr': [ 'ltr' ] } );\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nvar actionbardata = {\"siteID\":\"244906625\",\"postID\":\"0\",\"siteURL\":\"http:\\/\\/nihankokcu32.wordpress.com\",\"xhrURL\":\"https:\\/\\/nihankokcu32.wordpress.com\\/wp-admin\\/admin-ajax.php\",\"nonce\":\"affdec1c13\",\"isLoggedIn\":\"\",\"statusMessage\":\"\",\"subsEmailDefault\":\"instantly\",\"proxyScriptUrl\":\"https:\\/\\/s0.wp.com\\/wp-content\\/js\\/wpcom-proxy-request.js?ver=20211021\",\"i18n\":{\"followedText\":\"Bu sitedeki yeni yaz\\u0131lar art\\u0131k size ait <a href=\\\"https:\\/\\/wordpress.com\\/reader\\\">Okuyucu<\\/a> i\\u00e7inde g\\u00f6r\\u00fcnecektir\",\"foldBar\":\"Bu \\u015feridi gizle\",\"unfoldBar\":\"Bu \\u015feridi geni\\u015flet\",\"shortLinkCopied\":\"K\\u0131sa ba\\u011flant\\u0131 panoya kopyaland\\u0131.\"}};\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n{\"imports\":{\"@wordpress\\/interactivity\":\"https:\\/\\/s0.wp.com\\/wp-content\\/plugins\\/gutenberg-core\\/v20.6.0\\/build-module\\/interactivity\\/index.min.js?ver=d9948f13df6155717023\"}}\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n{\"prefetch\":[{\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"\\/*\"},{\"not\":{\"href_matches\":[\"\\/wp-*.php\",\"\\/wp-admin\\/*\",\"\\/files\\/*\",\"\\/wp-content\\/*\",\"\\/wp-content\\/plugins\\/*\",\"\\/wp-content\\/themes\\/pub\\/aether\\/*\",\"\\/*\\\\?(.+)\"]}},{\"not\":{\"selector_matches\":\"a[rel~=\\\"nofollow\\\"]\"}},{\"not\":{\"selector_matches\":\".no-prefetch, .no-prefetch a\"}}]},\"eagerness\":\"conservative\"}]}\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nvar WPGroHo = {\"my_hash\":\"\"};\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n\t\t// Initialize and attach hovercards to all gravatars\n\t\t( function() {\n\t\t\tfunction init() {\n\t\t\t\tif ( typeof Gravatar === 'undefined' ) {\n\t\t\t\t\treturn;\n\t\t\t\t}\n\n\t\t\t\tif ( typeof Gravatar.init !== 'function' ) {\n\t\t\t\t\treturn;\n\t\t\t\t}\n\n\t\t\t\tGravatar.profile_cb = function ( hash, id ) {\n\t\t\t\t\tWPGroHo.syncProfileData( hash, id );\n\t\t\t\t};\n\n\t\t\t\tGravatar.my_hash = WPGroHo.my_hash;\n\t\t\t\tGravatar.init(\n\t\t\t\t\t'body',\n\t\t\t\t\t'#wp-admin-bar-my-account',\n\t\t\t\t\t{\n\t\t\t\t\t\ti18n: {\n\t\t\t\t\t\t\t'Edit your profile \u2192': 'Profilinizi d\u00fczenleyin \u2192',\n\t\t\t\t\t\t\t'View profile \u2192': 'Profili g\u00f6r\u00fcnt\u00fcle \u2192',\n\t\t\t\t\t\t\t'Contact': '\u0130leti\u015fim',\n\t\t\t\t\t\t\t'Send money': 'Para G\u00f6nder',\n\t\t\t\t\t\t\t'Sorry, we are unable to load this Gravatar profile.': '\u00dczg\u00fcn\u00fcz, bu Gravatar profili y\u00fcklenemiyor.',\n\t\t\t\t\t\t\t'Gravatar not found.': 'Gravatar not found.',\n\t\t\t\t\t\t\t'Too Many Requests.': '\u00c7ok Fazla \u0130stek Var.',\n\t\t\t\t\t\t\t'Internal Server Error.': 'Dahili Sunucu Hatas\u0131.',\n\t\t\t\t\t\t\t'Is this you?': 'Bu siz misiniz?',\n\t\t\t\t\t\t\t'Claim your free profile.': 'Claim your free profile.',\n\t\t\t\t\t\t\t'Email': 'E-posta',\n\t\t\t\t\t\t\t'Home Phone': 'Ev Telefonu',\n\t\t\t\t\t\t\t'Work Phone': '\u0130\u015f Telefonu',\n\t\t\t\t\t\t\t'Cell Phone': 'Cell Phone',\n\t\t\t\t\t\t\t'Contact Form': '\u0130leti\u015fim Formu',\n\t\t\t\t\t\t\t'Calendar': 'Takvim',\n\t\t\t\t\t\t},\n\t\t\t\t\t}\n\t\t\t\t);\n\t\t\t}\n\n\t\t\tif ( document.readyState !== 'loading' ) {\n\t\t\t\tinit();\n\t\t\t} else {\n\t\t\t\tdocument.addEventListener( 'DOMContentLoaded', init );\n\t\t\t}\n\t\t} )();\n\t",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nwindow.addEventListener( \"load\", function( event ) {\n\tvar link = document.createElement( \"link\" );\n\tlink.href = \"https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20250116\";\n\tlink.type = \"text/css\";\n\tlink.rel = \"stylesheet\";\n\tdocument.head.appendChild( link );\n\n\tvar script = document.createElement( \"script\" );\n\tscript.src = \"https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20250204\";\n\tscript.defer = true;\n\tdocument.body.appendChild( script );\n} );\n",
+            "endpoints": [
+                "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20250116",
+                "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20250204"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n\t( function() {\n\t\tvar skipLinkTarget = document.querySelector( 'main' ),\n\t\t\tsibling,\n\t\t\tskipLinkTargetID,\n\t\t\tskipLink;\n\n\t\t// Early exit if a skip-link target can't be located.\n\t\tif ( ! skipLinkTarget ) {\n\t\t\treturn;\n\t\t}\n\n\t\t/*\n\t\t * Get the site wrapper.\n\t\t * The skip-link will be injected in the beginning of it.\n\t\t */\n\t\tsibling = document.querySelector( '.wp-site-blocks' );\n\n\t\t// Early exit if the root element was not found.\n\t\tif ( ! sibling ) {\n\t\t\treturn;\n\t\t}\n\n\t\t// Get the skip-link target's ID, and generate one if it doesn't exist.\n\t\tskipLinkTargetID = skipLinkTarget.id;\n\t\tif ( ! skipLinkTargetID ) {\n\t\t\tskipLinkTargetID = 'wp--skip-link--target';\n\t\t\tskipLinkTarget.id = skipLinkTargetID;\n\t\t}\n\n\t\t// Create the skip link.\n\t\tskipLink = document.createElement( 'a' );\n\t\tskipLink.classList.add( 'skip-link', 'screen-reader-text' );\n\t\tskipLink.id = 'wp-skip-link';\n\t\tskipLink.href = '#' + skipLinkTargetID;\n\t\tskipLink.innerText = '\u0130\u00e7eri\u011fe ge\u00e7';\n\n\t\t// Inject the skip link.\n\t\tsibling.parentElement.insertBefore( skipLink, sibling );\n\t}() );\n\t\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nwp.jpI18nLoader.state = {\"baseUrl\":\"https://widgets.wp.com/languages/\",\"locale\":\"tr\",\"domainMap\":{\"jetpack-account-protection\":\"plugins/jetpack\",\"jetpack-admin-ui\":\"plugins/jetpack\",\"jetpack-assets\":\"plugins/jetpack\",\"jetpack-backup-pkg\":\"plugins/jetpack\",\"jetpack-blaze\":\"plugins/jetpack\",\"jetpack-boost-core\":\"plugins/jetpack\",\"jetpack-boost-speed-score\":\"plugins/jetpack\",\"jetpack-classic-theme-helper\":\"plugins/jetpack\",\"jetpack-compat\":\"plugins/jetpack\",\"jetpack-config\":\"plugins/jetpack\",\"jetpack-connection\":\"plugins/jetpack\",\"jetpack-explat\":\"plugins/jetpack\",\"jetpack-external-media\":\"plugins/jetpack\",\"jetpack-forms\":\"plugins/jetpack\",\"jetpack-image-cdn\":\"plugins/jetpack\",\"jetpack-import\":\"plugins/jetpack\",\"jetpack-ip\":\"plugins/jetpack\",\"jetpack-jitm\":\"plugins/jetpack\",\"jetpack-licensing\":\"plugins/jetpack\",\"jetpack-masterbar\":\"plugins/jetpack\",\"jetpack-my-jetpack\":\"plugins/jetpack\",\"jetpack-password-checker\":\"plugins/jetpack\",\"jetpack-plugins-installer\":\"plugins/jetpack\",\"jetpack-post-list\":\"plugins/jetpack\",\"jetpack-protect-models\":\"plugins/jetpack\",\"jetpack-protect-status\":\"plugins/jetpack\",\"jetpack-publicize-pkg\":\"plugins/jetpack\",\"jetpack-search-pkg\":\"plugins/jetpack\",\"jetpack-stats\":\"plugins/jetpack\",\"jetpack-stats-admin\":\"plugins/jetpack\",\"jetpack-subscribers-dashboard\":\"plugins/jetpack\",\"jetpack-sync\":\"plugins/jetpack\",\"jetpack-videopress-pkg\":\"plugins/jetpack\",\"jetpack-waf\":\"plugins/jetpack\",\"jetpack-wordads\":\"plugins/jetpack\",\"woocommerce-analytics\":\"plugins/jetpack\"},\"domainPaths\":{\"jetpack-account-protection\":\"jetpack_vendor/automattic/jetpack-account-protection/\",\"jetpack-admin-ui\":\"jetpack_vendor/automattic/jetpack-admin-ui/\",\"jetpack-assets\":\"jetpack_vendor/automattic/jetpack-assets/\",\"jetpack-backup-pkg\":\"jetpack_vendor/automattic/jetpack-backup/\",\"jetpack-blaze\":\"jetpack_vendor/automattic/jetpack-blaze/\",\"jetpack-boost-core\":\"jetpack_vendor/automattic/jetpack-boost-core/\",\"jetpack-boost-speed-score\":\"jetpack_vendor/automattic/jetpack-boost-speed-score/\",\"jetpack-classic-theme-helper\":\"jetpack_vendor/automattic/jetpack-classic-theme-helper/\",\"jetpack-compat\":\"jetpack_vendor/automattic/jetpack-compat/\",\"jetpack-config\":\"jetpack_vendor/automattic/jetpack-config/\",\"jetpack-connection\":\"jetpack_vendor/automattic/jetpack-connection/\",\"jetpack-explat\":\"jetpack_vendor/automattic/jetpack-explat/\",\"jetpack-external-media\":\"jetpack_vendor/automattic/jetpack-external-media/\",\"jetpack-forms\":\"jetpack_vendor/automattic/jetpack-forms/\",\"jetpack-image-cdn\":\"jetpack_vendor/automattic/jetpack-image-cdn/\",\"jetpack-import\":\"jetpack_vendor/automattic/jetpack-import/\",\"jetpack-ip\":\"jetpack_vendor/automattic/jetpack-ip/\",\"jetpack-jitm\":\"jetpack_vendor/automattic/jetpack-jitm/\",\"jetpack-licensing\":\"jetpack_vendor/automattic/jetpack-licensing/\",\"jetpack-masterbar\":\"jetpack_vendor/automattic/jetpack-masterbar/\",\"jetpack-my-jetpack\":\"jetpack_vendor/automattic/jetpack-my-jetpack/\",\"jetpack-password-checker\":\"jetpack_vendor/automattic/jetpack-password-checker/\",\"jetpack-plugins-installer\":\"jetpack_vendor/automattic/jetpack-plugins-installer/\",\"jetpack-post-list\":\"jetpack_vendor/automattic/jetpack-post-list/\",\"jetpack-protect-models\":\"jetpack_vendor/automattic/jetpack-protect-models/\",\"jetpack-protect-status\":\"jetpack_vendor/automattic/jetpack-protect-status/\",\"jetpack-publicize-pkg\":\"jetpack_vendor/automattic/jetpack-publicize/\",\"jetpack-search-pkg\":\"jetpack_vendor/automattic/jetpack-search/\",\"jetpack-stats\":\"jetpack_vendor/automattic/jetpack-stats/\",\"jetpack-stats-admin\":\"jetpack_vendor/automattic/jetpack-stats-admin/\",\"jetpack-subscribers-dashboard\":\"jetpack_vendor/automattic/jetpack-subscribers-dashboard/\",\"jetpack-sync\":\"jetpack_vendor/automattic/jetpack-sync/\",\"jetpack-videopress-pkg\":\"jetpack_vendor/automattic/jetpack-videopress/\",\"jetpack-waf\":\"jetpack_vendor/automattic/jetpack-waf/\",\"jetpack-wordads\":\"jetpack_vendor/automattic/jetpack-wordads/\",\"woocommerce-analytics\":\"jetpack_vendor/automattic/woocommerce-analytics/\"}};\n",
+            "endpoints": [
+                "https://widgets.wp.com/languages/"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n( function( domain, translations ) {\n\tvar localeData = translations.locale_data[ domain ] || translations.locale_data.messages;\n\tlocaleData[\"\"].domain = domain;\n\twp.i18n.setLocaleData( localeData, domain );\n} )( \"jetpack-search-pkg\", {\"domain\":\"\",\"locale_data\":{\"messages\":{\"\":{\"domain\":\"\",\"plural_forms\":\"nplurals=2; plural=n > 1;\",\"language\":\"tr\",\"project_id_version\":\"Plugins - Jetpack &#8211; WP Security, Backup, Speed, &amp; Growth - Development (trunk)\"},\"Price: high to low\":[\"Fiyat: y\\u00fcksekten d\\u00fc\\u015f\\u00fc\\u011fe\"],\"Price: low to high\":[\"Fiyat: d\\u00fc\\u015f\\u00fckten y\\u00fckse\\u011fe\"],\"Oldest\":[\"Eski\"],\"Relevance\":[\"\\u0130lgi\"],\"Rating\":[\"Oylama\"],\"Newest\":[\"En yeni\"]}}} );\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\nvar JetpackInstantSearchOptions=JSON.parse(decodeURIComponent(\"%7B%22overlayOptions%22%3A%7B%22colorTheme%22%3A%22light%22%2C%22enableInfScroll%22%3Atrue%2C%22enableFilteringOpensOverlay%22%3Atrue%2C%22enablePostDate%22%3Atrue%2C%22enableSort%22%3Atrue%2C%22highlightColor%22%3A%22%23FFC%22%2C%22overlayTrigger%22%3A%22submit%22%2C%22resultFormat%22%3A%22expanded%22%2C%22showPoweredBy%22%3Atrue%2C%22defaultSort%22%3A%22relevance%22%2C%22excludedPostTypes%22%3A%5B%5D%7D%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fnihankokcu32.wordpress.com%22%2C%22locale%22%3A%22en-US%22%2C%22postsPerPage%22%3A10%2C%22siteId%22%3A244906625%2C%22postTypes%22%3A%7B%22post%22%3A%7B%22singular_name%22%3A%22Yaz%5Cu0131%22%2C%22name%22%3A%22Yaz%5Cu0131lar%22%7D%2C%22page%22%3A%7B%22singular_name%22%3A%22Sayfa%22%2C%22name%22%3A%22Sayfalar%22%7D%2C%22attachment%22%3A%7B%22singular_name%22%3A%22Ortam%22%2C%22name%22%3A%22Ortam%22%7D%7D%2C%22webpackPublicPath%22%3A%22https%3A%5C%2F%5C%2Fs2.wp.com%5C%2Fwp-content%5C%2Fmu-plugins%5C%2Fjetpack-plugin%5C%2Fmoon%5C%2Fjetpack_vendor%5C%2Fautomattic%5C%2Fjetpack-search%5C%2Fbuild%5C%2Finstant-search%5C%2F%22%2C%22isPhotonEnabled%22%3Atrue%2C%22isFreePlan%22%3Atrue%2C%22apiRoot%22%3A%22https%3A%5C%2F%5C%2Fpublic-api.wordpress.com%5C%2F%22%2C%22apiNonce%22%3A%22379c878c52%22%2C%22isPrivateSite%22%3Afalse%2C%22isWpcom%22%3Atrue%2C%22hasOverlayWidgets%22%3Atrue%2C%22widgets%22%3A%5B%7B%22filters%22%3A%5B%7B%22name%22%3A%22Mentions%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22mentions%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-1%22%2C%22filter_id%22%3A%22taxonomy_0%22%7D%2C%7B%22name%22%3A%22Kategoriler%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22category%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-1%22%2C%22filter_id%22%3A%22taxonomy_1%22%7D%2C%7B%22name%22%3A%22Etiketler%22%2C%22type%22%3A%22taxonomy%22%2C%22taxonomy%22%3A%22post_tag%22%2C%22count%22%3A5%2C%22widget_id%22%3A%22jetpack-search-filters-1%22%2C%22filter_id%22%3A%22taxonomy_2%22%7D%2C%7B%22name%22%3A%22Y%5Cu0131l%22%2C%22type%22%3A%22date_histogram%22%2C%22count%22%3A5%2C%22field%22%3A%22post_date%22%2C%22interval%22%3A%22year%22%2C%22widget_id%22%3A%22jetpack-search-filters-1%22%2C%22filter_id%22%3A%22date_histogram_3%22%7D%5D%2C%22widget_id%22%3A%22jetpack-search-filters-1%22%7D%5D%2C%22widgetsOutsideOverlay%22%3A%5B%5D%2C%22hasNonSearchWidgets%22%3Afalse%2C%22preventTrackingCookiesReset%22%3Afalse%7D\"));\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n\t\t(function () {\n\t\t\tvar wpcom_reblog = {\n\t\t\t\tsource: 'toolbar',\n\n\t\t\t\ttoggle_reblog_box_flair: function (obj_id, post_id) {\n\n\t\t\t\t\t// Go to site selector. This will redirect to their blog if they only have one.\n\t\t\t\t\tconst postEndpoint = `https://wordpress.com/post`;\n\n\t\t\t\t\t// Ideally we would use the permalink here, but fortunately this will be replaced with the \n\t\t\t\t\t// post permalink in the editor.\n\t\t\t\t\tconst originalURL = `${ document.location.href }?page_id=${ post_id }`; \n\t\t\t\t\t\n\t\t\t\t\tconst url =\n\t\t\t\t\t\tpostEndpoint +\n\t\t\t\t\t\t'?url=' +\n\t\t\t\t\t\tencodeURIComponent( originalURL ) +\n\t\t\t\t\t\t'&is_post_share=true' +\n\t\t\t\t\t\t'&v=5';\n\n\t\t\t\t\tconst redirect = function () {\n\t\t\t\t\t\tif (\n\t\t\t\t\t\t\t! window.open( url, '_blank' )\n\t\t\t\t\t\t) {\n\t\t\t\t\t\t\tlocation.href = url;\n\t\t\t\t\t\t}\n\t\t\t\t\t};\n\n\t\t\t\t\tif ( /Firefox/.test( navigator.userAgent ) ) {\n\t\t\t\t\t\tsetTimeout( redirect, 0 );\n\t\t\t\t\t} else {\n\t\t\t\t\t\tredirect();\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t};\n\n\t\t\twindow.wpcom_reblog = wpcom_reblog;\n\t\t})();\n\t",
+            "endpoints": [
+                "https://wordpress.com/post`;"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n_tkq = window._tkq || [];\n_stq = window._stq || [];\n_tkq.push(['storeContext', {'blog_id':'244906625','blog_tz':'3','user_lang':'tr','blog_lang':'tr','user_id':'0'}]);\n_stq.push(['view', {'blog':'244906625','v':'wpcom','tz':'3','user_id':'0','arch_home':'1','subd':'nihankokcu32'}]);\n_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJoP2ZtQW1DP2g4LmF8OVdiVWxCa2x1JVdLc1pLTV9WaDVbV3c0a2h5OXg2W3o2VHxiM2sldDkvNmpdUElJc3lGaEE2MGdUazA/empiTytxaVtlYjBhNW5SLDZKT0ZCW2kzWE1CTktdYjUvdXw/RC4lXy8tUEg9Q3VnYXNoMWhhOUcwJTF0cHR4WC84YncsSyxfMWZ+P1pOcS1yMDNKfnFKSA=='}]);\n_stq.push([ 'clickTrackerInit', '244906625', '0' ]);\n",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n\t\t\twindow._tkq = window._tkq || [];\n\n\t\t\twindow._tkq.push( [ 'recordEvent', 'wpcom_marketing_bar_impression', {\"is_current_user_blog_owner\":false} ] );\n\n\t\t\tdocument.querySelectorAll( '#marketingbar > a' ).forEach( link => {\n\t\t\t\tlink.addEventListener( 'click', ( e ) => {\n\t\t\t\t\twindow._tkq.push( [ 'recordEvent', 'wpcom_marketing_bar_cta_click', {\"is_current_user_blog_owner\":false} ] );\n\t\t\t\t} );\n\t\t\t});\n\t\t",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "inline_script",
+            "content": "\n( function() {\n\tfunction getMobileUserAgentInfo() {\n\t\tif ( typeof wpcom_mobile_user_agent_info === 'object' ) {\n\t\t\twpcom_mobile_user_agent_info.init();\n\t\t\tvar mobileStatsQueryString = '';\n\n\t\t\tif ( wpcom_mobile_user_agent_info.matchedPlatformName !== false ) {\n\t\t\t\tmobileStatsQueryString += '&x_' + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;\n\t\t\t}\n\n\t\t\tif ( wpcom_mobile_user_agent_info.matchedUserAgentName !== false ) {\n\t\t\t\tmobileStatsQueryString += '&x_' + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;\n\t\t\t}\n\n\t\t\tif ( wpcom_mobile_user_agent_info.isIPad() ) {\n\t\t\t\tmobileStatsQueryString += '&x_' + 'ipad_views' + '=' + 'views';\n\t\t\t}\n\n\t\t\tif ( mobileStatsQueryString != '' ) {\n\t\t\t\tnew Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();\n\t\t\t}\n\t\t}\n\t}\n\n\tdocument.addEventListener( 'DOMContentLoaded', getMobileUserAgentInfo );\n} )();\n",
+            "endpoints": [
+                "//pixel.wp.com/g.gif?v=wpcom-no-pv"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/dom-ready/index.min.js?m=1744959081i&ver=222ad38e3e5e302c8bbf",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s2.wp.com/_static/??/wp-includes/js/dist/vendor/wp-polyfill.min.js,/wp-content/mu-plugins/jetpack-plugin/moon/_inc/blocks/subscriptions/view.js,/wp-content/js/rlt-proxy.js?m=1745439353j",
+            "endpoints": [
+                "http://www.w3.org/2000/svg",
+                "https://a",
+                "https://a#\u0431",
+                "https://a/c%20d?a=1&c=3",
+                "https://a@b",
+                "https://github.com/zloirock/core-js",
+                "https://github.com/zloirock/core-js/blob/v3.39.0/LICENSE",
+                "https://subscribe.wordpress.com",
+                "https://subscribe.wordpress.com/memberships/?",
+                "https://x",
+                "https://\u0442\u0435\u0441\u0442"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/hooks/index.min.js?m=1744959081i&ver=84e753e2b66eb7028d38",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/i18n/index.min.js?m=1744959081i&ver=bd5a2533e717a1043151",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s1.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build-module/block-library/navigation/view.min.js?ver=38dd13322236f359c8a9",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://0.gravatar.com/js/hovercards/hovercards.min.js?ver=20252317d2298fc173af206bd9f65440008ab9e1ee2bd896241083289a9e27bd0efc7c",
+            "endpoints": [
+                "/js/hovercards/hovercards",
+                "http://www.w3.org/2000/svg",
+                "https://0.gravatar.com/avatar/",
+                "https://0.gravatar.com/js/hovercards/hovercards.min.css?'.concat(i,",
+                "https://api.gravatar.com/v3/profiles/",
+                "https://gravatar.com/profiles/edit?utm_source=hovercard",
+                "https://gravatar.com/signup?utm_source=hovercard",
+                "https://pixel.wp.com/g.gif?v=wpcom2&x_grav-hover=",
+                "https://s.gravatar.com/'+e[a]+",
+                "https://s.gravatar.com/icons/gravatar.svg",
+                "https://s.gravatar.com/icons/link.svg",
+                "v3/profiles/"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s1.wp.com/wp-content/js/mobile-useragent-info.js?m=1609849039i&ver=20241018",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s1.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/jetpack_vendor/automattic/jetpack-assets/build/i18n-loader.js?m=1725888675i",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s0.wp.com/wp-content/plugins/gutenberg-core/v20.6.0/build/url/index.min.js?m=1744959081i&ver=1203626ff9ccb36dc17c",
+            "endpoints": [
+                "http://example.com"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/jetpack_vendor/automattic/jetpack-search/build/instant-search/jp-search.js?m=1747071560i",
+            "endpoints": [],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://stats.wp.com/w.js?ver=202523",
+            "endpoints": [
+                "//pixel.wp.com/",
+                "//pixel.wp.com/t.gif?",
+                "/wp-content/uploads"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://stats.wp.com/w.js?68",
+            "endpoints": [
+                "//pixel.wp.com/",
+                "//pixel.wp.com/t.gif?",
+                "/wp-content/uploads"
+            ],
+            "sensitive_data": []
+        },
+        {
+            "file_url": "https://nihankokcu32.wordpress.com/wp-content/js/bilmur-4.min.js?i=13&m=202523",
+            "endpoints": [
+                "https://pixel.wp.com/boom.gif?bilmur=1"
+            ],
+            "sensitive_data": []
+        }
+    ]
+}

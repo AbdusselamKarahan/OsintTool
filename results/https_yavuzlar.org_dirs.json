@@ -1,0 +1,550 @@
+{
+    "target": "https://yavuzlar.org",
+    "scan_info": {
+        "total_paths": 54,
+        "threads_used": 10,
+        "timeout": 5
+    },
+    "directories": [
+        {
+            "url": "https://yavuzlar.org/css",
+            "path": "css",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 2.724,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/lib",
+            "path": "lib",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 2.733,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/template.html",
+            "path": "template.html",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29850,
+            "response_time": 2.736,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/custom.js",
+            "path": "custom.js",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29846,
+            "response_time": 2.741,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/jquery.min.js",
+            "path": "jquery.min.js",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29850,
+            "response_time": 2.799,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/libs",
+            "path": "libs",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 2.83,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/templates.html",
+            "path": "templates.html",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29851,
+            "response_time": 3.022,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/sample.html",
+            "path": "sample.html",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29848,
+            "response_time": 3.117,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/login",
+            "path": "login",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29966,
+            "response_time": 3.137,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/bootstrap.min.js",
+            "path": "bootstrap.min.js",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29853,
+            "response_time": 3.138,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/log",
+            "path": "log",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 3.145,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/bootstrap.min.css",
+            "path": "bootstrap.min.css",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29854,
+            "response_time": 3.199,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/main.js",
+            "path": "main.js",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 3.228,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/logs",
+            "path": "logs",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 3.383,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/error.log",
+            "path": "error.log",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29846,
+            "response_time": 3.445,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/favicon.ico",
+            "path": "favicon.ico",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29848,
+            "response_time": 3.518,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/media",
+            "path": "media",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29842,
+            "response_time": 3.561,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/access.log",
+            "path": "access.log",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29847,
+            "response_time": 3.631,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/debug.log",
+            "path": "debug.log",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29846,
+            "response_time": 3.689,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/old",
+            "path": "old",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 3.703,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/prod",
+            "path": "prod",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 3.875,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/private",
+            "path": "private",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 3.887,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/backup.sql",
+            "path": "backup.sql",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29847,
+            "response_time": 3.94,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/dump.sql",
+            "path": "dump.sql",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 4.024,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/static",
+            "path": "static",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29843,
+            "response_time": 4.049,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/test.php",
+            "path": "test.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 4.114,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/production",
+            "path": "production",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29847,
+            "response_time": 4.12,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/1.php",
+            "path": "1.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29842,
+            "response_time": 4.159,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/profile",
+            "path": "profile",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 4.233,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/database.sql",
+            "path": "database.sql",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29849,
+            "response_time": 4.341,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/phpinfo.php",
+            "path": "phpinfo.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29848,
+            "response_time": 4.409,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/root",
+            "path": "root",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 4.454,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/secure",
+            "path": "secure",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29843,
+            "response_time": 4.521,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/info.php",
+            "path": "info.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 4.556,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/scripts",
+            "path": "scripts",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 4.622,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/shell.php",
+            "path": "shell.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29846,
+            "response_time": 4.654,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/security",
+            "path": "security",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 4.657,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/src",
+            "path": "src",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 4.728,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/staging",
+            "path": "staging",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 4.805,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/cmd.php",
+            "path": "cmd.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 4.861,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/storage",
+            "path": "storage",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 4.915,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/command.php",
+            "path": "command.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29848,
+            "response_time": 4.919,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/sys",
+            "path": "sys",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 4.959,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/execute.php",
+            "path": "execute.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29848,
+            "response_time": 4.975,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/eval.php",
+            "path": "eval.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 5.016,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/system",
+            "path": "system",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29843,
+            "response_time": 5.075,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/system.php",
+            "path": "system.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29847,
+            "response_time": 5.08,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/temp",
+            "path": "temp",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 5.13,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/test",
+            "path": "test",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29841,
+            "response_time": 5.169,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/backdoor.php",
+            "path": "backdoor.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29849,
+            "response_time": 5.207,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/upload.php",
+            "path": "upload.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29847,
+            "response_time": 5.262,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/file.php",
+            "path": "file.php",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29845,
+            "response_time": 5.271,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/testing",
+            "path": "testing",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29844,
+            "response_time": 5.296,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        },
+        {
+            "url": "https://yavuzlar.org/tmp",
+            "path": "tmp",
+            "status": 404,
+            "status_class": "danger",
+            "content_length": 29840,
+            "response_time": 5.383,
+            "content_type": "text/html; charset=utf-8",
+            "is_redirect": false
+        }
+    ]
+}

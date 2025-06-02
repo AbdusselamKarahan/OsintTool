@@ -1,0 +1,292 @@
+{
+    "target": "https://yavuzlar.org/",
+    "js_files": [
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/fd9d1056-b47d6942d78b7893.js",
+            "size": 172190
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/69-cb6998a421865e75.js",
+            "size": 112576
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/main-app-c18a6f612fc47fbd.js",
+            "size": 462
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/355-20e8be6102d0f9c4.js",
+            "size": 144115
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/825-ce85e9fb84c135e3.js",
+            "size": 191513
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/app/page-1029ada4a120c5c6.js",
+            "size": 20107
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/169-101a13f0307e6b6e.js",
+            "size": 119610
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/app/layout-9a23e057d82e5411.js",
+            "size": 6727
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/app/error-d60ea12dc35e2dc4.js",
+            "size": 535
+        },
+        {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-72GT07QVDX",
+            "size": 385154
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+            "size": 91413
+        },
+        {
+            "url": "https://yavuzlar.org/_next/static/chunks/webpack-3ca0242fd73361d8.js",
+            "size": 3776
+        }
+    ],
+    "analysis": [
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/fd9d1056-b47d6942d78b7893.js",
+            "endpoints": [],
+            "urls": [
+                "https://reactjs.org/docs/error-decoder.html?invariant=",
+                "http://www.w3.org/2000/svg",
+                "http://www.w3.org/2000/svg",
+                "http://www.w3.org/2000/svg",
+                "http://www.w3.org/1998/Math/MathML",
+                "http://www.w3.org/2000/svg",
+                "http://www.w3.org/1998/Math/MathML",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/1999/xlink",
+                "http://www.w3.org/XML/1998/namespace",
+                "http://www.w3.org/XML/1998/namespace",
+                "http://www.w3.org/XML/1998/namespace",
+                "http://www.w3.org/2000/svg",
+                "http://www.w3.org/1998/Math/MathML",
+                "http://www.w3.org/2000/svg"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/69-cb6998a421865e75.js",
+            "endpoints": [],
+            "urls": [
+                "http://n",
+                "https://nextjs.org/docs/messages/dynamic-server-error"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/main-app-c18a6f612fc47fbd.js",
+            "endpoints": [],
+            "urls": [],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/355-20e8be6102d0f9c4.js",
+            "endpoints": [
+                "//",
+                "//"
+            ],
+            "urls": [
+                "https://mui.com/production-error/?code=",
+                "http://n",
+                "http://n"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/825-ce85e9fb84c135e3.js",
+            "endpoints": [],
+            "urls": [],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/app/page-1029ada4a120c5c6.js",
+            "endpoints": [
+                "/coming",
+                "/coming"
+            ],
+            "urls": [
+                "https://github.com/Yavuzlar/VulnLab",
+                "https://www.blackhat.com/",
+                "https://docs.yavuzlar.org/diger/populer-yazilimlarin-kurulumlari/ubuntu-server-24.04-lts-kurulumu",
+                "https://docs.yavuzlar.org/~gitbook/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1629654297299-c8506221ca97%3Fcrop%3Dentropy%26cs%3Dsrgb%26fm%3Djpg%26ixid%3DM3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxVYnVudHV8ZW58MHx8fHwxNzIyNjA4NDc4fDA%26ixlib%3Drb-4.0.3%26q%3D85&width=1248&dpr=2&quality=100&sign=3ffe5fc1&sv=1",
+                "https://docs.yavuzlar.org/network/firewall-nedir-nasil-calisir",
+                "https://docs.yavuzlar.org/~gitbook/image?url=https%3A%2F%2F10693534-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FpHJ8OuTO6xpfwqkn7vmg%252Fuploads%252Fgit-blob-e46cf1ce2206f7263c58d97545d92b69c519bcf3%252Ffirewall1.jpg%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=d9930950&sv=1",
+                "https://docs.yavuzlar.org/araclar/netcat",
+                "https://docs.yavuzlar.org/~gitbook/image?url=https%3A%2F%2F10693534-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FpHJ8OuTO6xpfwqkn7vmg%252Fuploads%252Fgit-blob-db7058c127df6db95b7c2e6bb999021af00452b1%252Fgiris.png%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=a2eb000b&sv=1",
+                "https://docs.yavuzlar.org/yazilim/nextjs-nedir",
+                "https://docs.yavuzlar.org/~gitbook/image?url=https%3A%2F%2F10693534-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FpHJ8OuTO6xpfwqkn7vmg%252Fuploads%252Fgit-blob-3e3d124c365d2d2c2f3c9799f176b43740085e55%252Fnextlogo.jpeg%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=d33fd7ab&sv=1",
+                "https://docs.yavuzlar.org/araclar/zap",
+                "https://docs.yavuzlar.org/~gitbook/image?url=https%3A%2F%2F10693534-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FpHJ8OuTO6xpfwqkn7vmg%252Fuploads%252Fgit-blob-372cb2b91bf06a42f4acbedbd4e86e90da80e24f%252Fzap-logo.png%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=54f7ae19&sv=1",
+                "https://sibervatan.org/",
+                "https://sibervatan.org/",
+                "https://yavuzlar.org/vulnlab",
+                "https://yavuzlar.org/codinLab"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/169-101a13f0307e6b6e.js",
+            "endpoints": [
+                "//"
+            ],
+            "urls": [
+                "http://www.w3.org/2000/svg",
+                "http://fb.me/use-check-prop-types"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/app/layout-9a23e057d82e5411.js",
+            "endpoints": [],
+            "urls": [
+                "https://github.com/Yavuzlar",
+                "https://x.com/siberyavuzlar",
+                "https://tr.linkedin.com/company/siberyavuzlar?trk=public_profile_volunteering-position_profile-section-card_full-click",
+                "https://www.instagram.com/siberyavuzlar",
+                "https://www.googletagmanager.com/gtag/js?id=G-72GT07QVDX",
+                "https://docs.yavuzlar.org/",
+                "https://docs.yavuzlar.org/"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/app/error-d60ea12dc35e2dc4.js",
+            "endpoints": [],
+            "urls": [],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://www.googletagmanager.com/gtag/js?id=G-72GT07QVDX",
+            "endpoints": [
+                "//",
+                "/gtag/js",
+                "/g",
+                "/as",
+                "/gs",
+                "/as/d/ccm/conversion",
+                "/g/d/ccm/conversion",
+                "/gs/ccm/conversion",
+                "/d/ccm/form-data",
+                "/gs",
+                "/td?id=",
+                "/a",
+                "/_/service_worker",
+                "/_/service_worker",
+                "/g/ccm/collect",
+                "/gs/ccm/collect",
+                "/travel/flights/click/conversion",
+                "/pagead/viewthroughconversion",
+                "/r1ag/g/c",
+                "/ag/g/c",
+                "/ga/g/c",
+                "/g/collect",
+                "/ddm/activity/",
+                "/d/pagead/form-data",
+                "/pagead/form-data",
+                "/activityi/",
+                "/gs/pagead/conversion",
+                "//",
+                "/gtag/js",
+                "/gtd",
+                "/gtag/destination",
+                "//",
+                "//",
+                "/mc/collect",
+                "/g/collect",
+                "/g/collect",
+                "//",
+                "/_/service_worker",
+                "//",
+                "//",
+                "//",
+                "/debug/bootstrap?id="
+            ],
+            "urls": [
+                "http://.",
+                "www.googletagmanager.com",
+                "https://www.google.com",
+                "https://www.googleadservices.com",
+                "https://pagead2.googlesyndication.com",
+                "https://td.doubleclick.net",
+                "https://www.googletagmanager.com",
+                "https://www.googletagmanager.com",
+                "https://pagead2.googlesyndication.com/pagead/gen_204?id=tcfe",
+                "https://adservice.google.com/pagead/regclk?",
+                "https://adservice.google.com/pagead/regclk?",
+                "www.googleadservices.com$/;function",
+                "https://www.google.com",
+                "https://www.youtube.com",
+                "https://m.youtube.com",
+                "https://www.googletagmanager.com/a?",
+                "https://www.googletagmanager.com/static/service_worker/",
+                "https://www.google.com/ccm/collect",
+                "https://pagead2.googlesyndication.com/ccm/collect",
+                "https://www.google.com/travel/flights/click/conversion",
+                "https://googleads.g.doubleclick.net/pagead/viewthroughconversion",
+                "https://ad.doubleclick.net/activity;",
+                "https://ade.googlesyndication.com/ddm/activity/",
+                "https://ad.doubleclick.net/activity;register_conversion=1;",
+                "https://www.google.com/pagead/form-data",
+                "https://google.com/pagead/form-data",
+                "https://www.googleadservices.com/pagead/conversion",
+                "https://pagead2.googlesyndication.com/pagead/conversion",
+                "https://www.google.com/pagead/1p-conversion",
+                "www.google.com",
+                "www.googleadservices.com",
+                "https://www.facebook.com/tr/",
+                "https://www.facebook.com/tr/",
+                "www.youtube.com",
+                "www.youtube-nocookie.com",
+                "https://www.youtube.com/iframe_api",
+                "https://www.merchant-center-analytics.goog",
+                "https://stats.g.doubleclick.net/g/collect",
+                "https://stats.g.doubleclick.net/g/collect?v=2&",
+                "https://www.%/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&",
+                "https://{ga4CollectionSubdomain.}analytics.google.com/g/s/collect",
+                "https://cct.google/taggy/agent.js"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+            "endpoints": [
+                "/a/i",
+                "/a/b",
+                "//",
+                "//",
+                "//"
+            ],
+            "urls": [
+                "http://a",
+                "http://a/c%20d?a=1&c=3",
+                "https://a@b",
+                "http://\u0442\u0435\u0441\u0442",
+                "http://a#\u0431",
+                "http://x"
+            ],
+            "potential_sensitive": []
+        },
+        {
+            "file_url": "https://yavuzlar.org/_next/static/chunks/webpack-3ca0242fd73361d8.js",
+            "endpoints": [
+                "/_next/"
+            ],
+            "urls": [],
+            "potential_sensitive": []
+        }
+    ]
+}
