@@ -18,8 +18,8 @@ class DirectoryScanner:
     def __init__(self, target_url: str, wordlist_path: str, threads: int = 10, timeout: int = 10):
         self.target_url = self._normalize_base_url(target_url)
         self.wordlist_path = wordlist_path
-        self.threads = min(max(1, threads), 50)
-        self.timeout = max(1, timeout)
+        self.threads = min(max(1, threads), 50)  # Ensure threads are between 1 and 50
+        self.timeout = max(1, timeout)  # Ensure timeout is at least 1 second
         self.results: List[Dict] = []
         self.session: Optional[aiohttp.ClientSession] = None
         logger.info(f"Initialized DirectoryScanner for {self.target_url}")
@@ -41,13 +41,14 @@ class DirectoryScanner:
         return urljoin(self.target_url, path.lstrip('/'))
 
     def _get_status_class(self, status_code: int) -> str:
+        """Get the status class for HTTP response codes"""
         if 200 <= status_code < 300:
-            return "success"
+            return "success"  # Green
         elif 300 <= status_code < 400:
-            return "warning"
+            return "warning"  # Yellow
         elif status_code >= 400:
-            return "danger"
-        return "secondary"
+            return "danger"   # Red
+        return "secondary"    # Default gray
 
     async def check_url(self, session: aiohttp.ClientSession, path: str) -> Optional[Dict]:
         """Check a URL with improved error handling"""
@@ -181,8 +182,8 @@ class DirectoryScanner:
                 subprocess.run(command, shell=True, check=True, capture_output=True, text=True)
                 results[tool] = True
             except subprocess.CalledProcessError as e:
-                print(f"Error running {tool}: {str(e)}")
+                logger.error(f"Error running {tool}: {str(e)}")
             except Exception as e:
-                print(f"Unexpected error running {tool}: {str(e)}")
+                logger.error(f"Unexpected error running {tool}: {str(e)}")
                 
         return results 

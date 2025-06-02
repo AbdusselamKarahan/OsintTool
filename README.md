@@ -43,6 +43,14 @@ The web interface will be available at `http://127.0.0.1:5000`
 
 ## 📚 Usage
 
+### Quick Start Guide
+
+1. After running the application, open your browser and navigate to `http://127.0.0.1:5000`
+2. You'll see three main tools in the dashboard:
+   - Directory Scanner
+   - Subdomain Scanner
+   - JavaScript Analyzer
+
 ### Directory Scanner
 1. Navigate to the Directory Scanner tab
 2. Enter the target URL (e.g., `https://example.com`)
@@ -53,7 +61,11 @@ The web interface will be available at `http://127.0.0.1:5000`
    - Content lengths
    - Found directories
 
-![Directory Scanner](static/directory_scanner.png)
+#### Advanced Directory Scanner Options
+- Use custom wordlists by placing them in the `wordlists` directory
+- Adjust scan speed in the configuration
+- Filter results by status codes
+- Export results in JSON format
 
 ### Subdomain Scanner
 1. Navigate to the Subdomain Scanner tab
@@ -64,7 +76,12 @@ The web interface will be available at `http://127.0.0.1:5000`
    - IP addresses
    - Response times
 
-![Subdomain Scanner](static/subdomain_scanner.png)
+#### Advanced Subdomain Scanner Features
+- DNS resolution for discovered subdomains
+- Port scanning capability
+- Custom DNS servers support
+- Wildcard detection
+- Export results in multiple formats
 
 ### JavaScript Analyzer
 1. Navigate to the JavaScript Analyzer tab
@@ -76,7 +93,66 @@ The web interface will be available at `http://127.0.0.1:5000`
    - API keys
    - Sensitive information
 
-![JavaScript Analyzer](static/js_analyzer.png)
+#### Advanced JavaScript Analysis
+- Deep scanning of external JavaScript files
+- Pattern matching for sensitive information
+- API endpoint detection
+- Source code analysis
+- Security vulnerability checks
+
+### Command Line Usage
+
+You can also use the tools via command line:
+
+```bash
+# Directory Scanner
+python cli.py dir-scan --url https://example.com --wordlist wordlists/directories.txt
+
+# Subdomain Scanner
+python cli.py sub-scan --domain example.com --output results/output.json
+
+# JavaScript Analyzer
+python cli.py js-scan --url https://example.com --deep
+```
+
+### Example Workflow
+
+1. Start with Subdomain Scanning:
+```bash
+python cli.py sub-scan --domain target.com
+```
+
+2. Scan discovered subdomains for directories:
+```bash
+python cli.py dir-scan --url https://sub.target.com
+```
+
+3. Analyze JavaScript files on found directories:
+```bash
+python cli.py js-scan --url https://sub.target.com/admin
+```
+
+### Best Practices
+
+1. **Rate Limiting**: 
+   - Use appropriate delays between requests
+   - Respect the target's resources
+   - Adjust thread count based on target
+
+2. **Legal Compliance**:
+   - Always obtain permission before scanning
+   - Follow responsible disclosure
+   - Respect privacy policies
+
+3. **Data Management**:
+   - Regularly clean up results directory
+   - Secure sensitive findings
+   - Use meaningful file names
+
+4. **Error Handling**:
+   - Check logs for errors
+   - Verify target accessibility
+   - Monitor system resources
 
 ## ⚙️ Configuration
 

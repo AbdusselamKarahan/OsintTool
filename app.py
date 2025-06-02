@@ -12,7 +12,7 @@ import logging
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 Config.init()
 
-# Logging ayarları
+# Logging settings
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -28,7 +28,7 @@ def scan_subdomains():
     if not target_domain:
         return jsonify({'error': 'Target domain is required'}), 400
     
-    # Linux sistemde ise recon araçlarını kullan
+    # Use reconnaissance tools if on Linux system
     if platform.system().lower() == 'linux':
         output_dir = os.path.join(Config.OUTPUT_DIR, target_domain)
         os.makedirs(output_dir, exist_ok=True)
@@ -36,7 +36,7 @@ def scan_subdomains():
         scanner = DirectoryScanner(target_domain, Config.WORDLIST_PATH)
         recon_results = scanner.run_linux_recon(target_domain, output_dir)
         
-        # Birleştirilmiş sonuçları oku
+        # Read combined results
         combined_results = []
         try:
             with open(os.path.join(output_dir, 'combined_results.txt'), 'r') as f:
@@ -50,7 +50,7 @@ def scan_subdomains():
             'output_dir': output_dir
         })
     
-    # Linux değilse normal subdomain taraması yap
+    # Perform normal subdomain scan if not on Linux
     scanner = SubdomainScanner(
         target_domain=target_domain,
         threads=Config.THREADS,
@@ -82,14 +82,14 @@ def scan_directories():
             timeout=Config.TIMEOUT
         )
         
-        # Event loop'u al veya oluştur
+        # Get or create event loop
         try:
             loop = asyncio.get_event_loop()
         except RuntimeError:
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
         
-        # Asenkron taramayı çalıştır
+        # Run async scan
         results = loop.run_until_complete(scanner.scan_directories())
         
         output_file = os.path.join(Config.OUTPUT_DIR, f"{target_url.replace('://', '_').replace('/', '_')}_dirs.json")
