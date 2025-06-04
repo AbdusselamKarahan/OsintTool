@@ -7,11 +7,16 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 ## 🎥 PoC
 
-[![OsintTool Demo](https://img.youtube.com/vi/o6gRTMPLvd4/0.jpg)](https://www.youtube.com/watch?v=o6gRTMPLvd4)
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=o6gRTMPLvd4">
+    <img src="https://img.youtube.com/vi/o6gRTMPLvd4/0.jpg" alt="OsintTool Demo">
+  </a>
+  <p><em>👉 Click the image to watch the demo</em></p>
+</div>
 
-👉 Click the link to watch 
-
-![OsintTool ScreenShot](static/ss.png)
+<div align="center">
+  <img src="static/ss.png" alt="OsintTool ScreenShot">
+</div>
 
 ---
 
