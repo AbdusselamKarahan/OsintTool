@@ -26,7 +26,7 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 ## 🛠️ Installation
 
 
-###Command Line Interface
+### Command Line Interface
 
 ```bash
 python osint_cli.py --help
