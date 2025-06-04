@@ -9,6 +9,8 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 [![OsintTool Demo](https://img.youtube.com/vi/o6gRTMPLvd4/0.jpg)](https://www.youtube.com/watch?v=o6gRTMPLvd4)
 
+![OsintTool ScreenShot](static/background.png)
+
 👉 Click the link to watch 
 
 ---
