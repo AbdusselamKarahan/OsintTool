@@ -9,13 +9,13 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 <div align="center">
   <a href="https://streamable.com/3tt0k6">
-    <img src="https://streamable.com/3tt0k6" alt="Osint Ninja Demo">
+    <img src=""C:\Users\abdus\Desktop\OsintTool\static\osint.cli.png"" alt="Osint Ninja Demo">
   </a>
   <p><em>👉 Click the image to watch the demo</em></p>
 </div>
 
 <div align="center">
-  <img src="static/ss.png" alt="OsintTool ScreenShot">
+  <img src="static/ss.png" alt="Osint Ninja ScreenShot">
 </div>
 
 ---
