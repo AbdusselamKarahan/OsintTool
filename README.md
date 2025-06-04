@@ -25,6 +25,13 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 ## 🛠️ Installation
 
+
+#Command Line Interface
+
+```bash
+python osint_cli.py --help
+```
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/AbdusselamKarahan/OsintTool.git
