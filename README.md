@@ -8,8 +8,8 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 ## 🎥 PoC
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=o6gRTMPLvd4">
-    <img src="https://img.youtube.com/vi/o6gRTMPLvd4/0.jpg" alt="OsintTool Demo">
+  <a href="https://streamable.com/3tt0k6">
+    <img src="https://streamable.com/3tt0k6" alt="Osint Ninja Demo">
   </a>
   <p><em>👉 Click the image to watch the demo</em></p>
 </div>
