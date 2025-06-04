@@ -15,16 +15,16 @@ class JSAnalyzer:
         self.logger = logging.getLogger(__name__)
 
     def extract_js_files(self) -> List[str]:
-        """Hedef URL'den JavaScript dosyalarını çıkarır"""
+        """Find inline and external JavaScript files"""
         try:
             response = self.session.get(self.target_url)
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Inline ve harici JavaScript dosyalarını bul
+            # Inline and external JavaScript files
             for script in soup.find_all('script'):
                 src = script.get('src')
                 if src:
-                    # Harici JavaScript dosyası
+                    # External JavaScript file
                     full_url = urljoin(self.target_url, src)
                     self.js_files.append(full_url)
                 elif script.string:
@@ -38,11 +38,11 @@ class JSAnalyzer:
 
             return self.js_files
         except requests.RequestException as e:
-            self.logger.error(f"JavaScript dosyaları çıkarılırken hata: {str(e)}")
+            self.logger.error(f"Error occurred while extracting JavaScript files: {str(e)}")
             return []
 
     def analyze_js_content(self) -> List[Dict]:
-        """JavaScript dosyalarını analiz eder"""
+        """Analyze JavaScript files"""
         for js_url in self.js_files:
             try:
                 response = self.session.get(js_url)
@@ -54,22 +54,22 @@ class JSAnalyzer:
                     'sensitive_data': self._find_sensitive_data(content)
                 })
             except requests.RequestException as e:
-                self.logger.error(f"JavaScript analizi sırasında hata ({js_url}): {str(e)}")
+                self.logger.error(f"Error occurred during JavaScript analysis ({js_url}): {str(e)}")
 
         return self.analysis_results
 
     def _extract_endpoints(self, content: str) -> List[str]:
-        """JavaScript kodundan endpoint'leri çıkarır"""
+        """Extract endpoints from JavaScript code"""
         endpoints = set()
         
-        # URL pattern'leri
+        # URL patterns
         url_patterns = [
             r'https?://[^\s<>"]+|www\.[^\s<>"]+',
             r'"/[^"]+"|\'\/[^\']+\'',
             r'`/[^`]+`'
         ]
 
-        # API endpoint pattern'leri
+        # API endpoint patterns
         api_patterns = [
             r'api/[a-zA-Z0-9-_/]+',
             r'v[0-9]+/[a-zA-Z0-9-_/]+',
@@ -80,7 +80,7 @@ class JSAnalyzer:
             matches = re.finditer(pattern, content)
             for match in matches:
                 endpoint = match.group()
-                # Tırnak işaretlerini temizle
+                # Clean quotation marks
                 endpoint = endpoint.strip('"\'`')
                 if endpoint:
                     endpoints.add(endpoint)
@@ -88,7 +88,7 @@ class JSAnalyzer:
         return sorted(list(endpoints))
 
     def _find_sensitive_data(self, content: str) -> List[str]:
-        """JavaScript kodunda hassas bilgileri arar"""
+        """Find sensitive data in JavaScript code"""
         sensitive_data = set()
         
         patterns = {
@@ -114,7 +114,7 @@ class JSAnalyzer:
         return sorted(list(sensitive_data))
 
     def save_results(self, output_file: str):
-        """Analiz sonuçlarını dosyaya kaydeder"""
+        """Save analysis results to file"""
         with open(output_file, 'w') as f:
             json.dump({
                 'target': self.target_url,

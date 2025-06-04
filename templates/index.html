@@ -13,27 +13,27 @@
     <div class="modal" id="scanModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Yeni Tarama</h2>
+                <h2>New Scan</h2>
                 <span class="material-icons close-modal">close</span>
             </div>
             <div class="modal-body">
                 <div class="tab-container">
                     <div class="tab-buttons">
                         <button class="tab-btn active" data-tab="subdomain">Subdomain</button>
-                        <button class="tab-btn" data-tab="directory">Dizin</button>
-                        <button class="tab-btn" data-tab="js">JS Analiz</button>
+                        <button class="tab-btn" data-tab="directory">Directory</button>
+                        <button class="tab-btn" data-tab="js">JS Analysis</button>
                     </div>
 
                     <!-- Subdomain Scanner Form -->
                     <div class="tab-content active" id="subdomain">
                         <form id="subdomainForm" class="scan-form">
                             <div class="form-group">
-                                <label>Hedef Domain</label>
-                                <input type="text" name="target_domain" placeholder="örnek: example.com" required>
+                                <label>Target Domain</label>
+                                <input type="text" name="target_domain" placeholder="example: example.com" required>
                             </div>
                             <button type="submit" class="submit-btn">
                                 <span class="material-icons">search</span>
-                                Taramayı Başlat
+                                Start Scan
                             </button>
                         </form>
                     </div>
@@ -42,12 +42,12 @@
                     <div class="tab-content" id="directory">
                         <form id="directoryForm" class="scan-form">
                             <div class="form-group">
-                                <label>Hedef URL</label>
-                                <input type="url" name="target_url" placeholder="örnek: https://example.com" required>
+                                <label>Target URL</label>
+                                <input type="url" name="target_url" placeholder="example: https://example.com" required>
                             </div>
                             <button type="submit" class="submit-btn">
                                 <span class="material-icons">folder_open</span>
-                                Taramayı Başlat
+                                Start Scan
                             </button>
                         </form>
                     </div>
@@ -56,12 +56,12 @@
                     <div class="tab-content" id="js">
                         <form id="jsForm" class="scan-form">
                             <div class="form-group">
-                                <label>Hedef URL</label>
-                                <input type="url" name="target_url" placeholder="örnek: https://example.com" required>
+                                <label>Target URL</label>
+                                <input type="url" name="target_url" placeholder="example: https://example.com" required>
                             </div>
                             <button type="submit" class="submit-btn">
                                 <span class="material-icons">code</span>
-                                Analizi Başlat
+                                Start Analysis
                             </button>
                         </form>
                     </div>
@@ -78,8 +78,8 @@
                 <div class="target-domain"></div>
             </div>
             <div class="loading-text">
-                <h3 id="loadingStatus">Tarama başlatılıyor...</h3>
-                <p id="loadingSubStatus">Hazırlanıyor...</p>
+                <h3 id="loadingStatus">Starting scan...</h3>
+                <p id="loadingSubStatus">Preparing...</p>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
                 <div class="header-right">
                     <button class="new-scan-btn" id="openScanModal">
                         <span class="material-icons">add</span>
-                        Yeni Tarama
+                        New Scan
                     </button>
                 </div>
             </header>
@@ -107,7 +107,7 @@
                         <span class="material-icons">analytics</span>
                     </div>
                     <div class="stat-info">
-                        <h3>Toplam Tarama</h3>
+                        <h3>Total Scans</h3>
                         <p class="stat-value">0</p>
                         <p class="stat-trend positive">
                             <span class="material-icons">arrow_upward</span>
@@ -121,7 +121,7 @@
                         <span class="material-icons">public</span>
                     </div>
                     <div class="stat-info">
-                        <h3>Bulunan Subdomain</h3>
+                        <h3>Found Subdomains</h3>
                         <p class="stat-value">0</p>
                         <p class="stat-trend positive">
                             <span class="material-icons">arrow_upward</span>
@@ -135,7 +135,7 @@
                         <span class="material-icons">warning</span>
                     </div>
                     <div class="stat-info">
-                        <h3>Güvenlik Açıkları</h3>
+                        <h3>Security Vulnerabilities</h3>
                         <p class="stat-value">0</p>
                         <p class="stat-trend negative">
                             <span class="material-icons">arrow_downward</span>
@@ -147,21 +147,21 @@
 
             <!-- Recent Scans -->
             <section class="recent-scans">
-                <h2>Son Taramalar</h2>
+                <h2>Recent Scans</h2>
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Hedef</th>
-                                <th>Tür</th>
-                                <th>Durum</th>
-                                <th>Sonuçlar</th>
-                                <th>Tarih</th>
-                                <th>İşlemler</th>
+                                <th>Target</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Results</th>
+                                <th>Date</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="scanResults">
-                            <!-- JavaScript ile doldurulacak -->
+                            <!-- JavaScript will populate this -->
                         </tbody>
                     </table>
                 </div>
@@ -171,7 +171,7 @@
             <div class="modal" id="resultsModal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2>Tarama Sonuçları</h2>
+                        <h2>Scan Results</h2>
                         <span class="material-icons close-modal">close</span>
                     </div>
                     <div class="modal-body">
@@ -184,7 +184,7 @@
 
     <div id="progress-container" class="hidden fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg">
         <div class="mb-2">
-            <span id="progress-status" class="text-gray-700">Tarama başlatılıyor...</span>
+            <span id="progress-status" class="text-gray-700">Starting scan...</span>
         </div>
         <div class="w-64 bg-gray-200 rounded-full h-2.5">
             <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
@@ -210,9 +210,9 @@
             const formData = new FormData(e.target);
             const domain = formData.get('target_domain');
             
-            // Loading overlay'i göster
+            // Show loading overlay
             document.querySelector('.loading-overlay').style.display = 'flex';
-            updateLoadingStatus('Tarama başlatılıyor...', domain);
+            updateLoadingStatus('Starting scan...', domain);
             
             try {
                 const response = await fetch('/api/scan/subdomains', {
@@ -227,34 +227,34 @@
                 
                 if (!response.ok) {
                     const errorData = await response.json();
-                    throw new Error(errorData.error || 'Tarama başlatılamadı');
+                    throw new Error(errorData.error || 'Scan could not be started');
                 }
 
                 const result = await response.json();
-                console.log('Tarama sonuçları:', result);
+                console.log('Scan results:', result);
                 
                 if (result.tool === 'Subfinder') {
-                    updateLoadingStatus('Subdomain\'ler taranıyor...', `${result.found} subdomain bulundu`);
+                    updateLoadingStatus('Scanning subdomains...', `${result.found} subdomains found`);
                 } else if (result.tool === 'Validation') {
-                    updateLoadingStatus('Aktif domain\'ler kontrol ediliyor...', 
-                        `${result.active_count} aktif / ${result.total_count} toplam`);
+                    updateLoadingStatus('Checking active domains...', 
+                        `${result.active_count} active / ${result.total_count} total`);
                 }
                 
-                // Domain bilgisini ekle
+                // Add domain information
                 result.domain = domain;
                 
-                // Sonuçları kaydet ve göster
+                // Save and display results
                 addToScanHistory(result);
                 showResults(result);
                 
             } catch (error) {
                 console.error('Error:', error);
-                updateLoadingStatus('Hata!', error.message);
+                updateLoadingStatus('Error!', error.message);
                 setTimeout(() => {
-                    alert('Bir hata oluştu: ' + error.message);
+                    alert('An error occurred: ' + error.message);
                 }, 1000);
             } finally {
-                // Loading overlay'i gizle
+                // Hide loading overlay
                 setTimeout(() => {
                     document.querySelector('.loading-overlay').style.display = 'none';
                 }, 500);
@@ -279,12 +279,12 @@
                 
                 if (!response.ok) {
                     const errorData = await response.json();
-                    throw new Error(errorData.error || 'Tarama başlatılamadı');
+                    throw new Error(errorData.error || 'Scan could not be started');
                 }
                 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Bir hata oluştu: ' + error.message);
+                alert('An error occurred: ' + error.message);
             }
         });
 
@@ -306,12 +306,12 @@
                 
                 if (!response.ok) {
                     const errorData = await response.json();
-                    throw new Error(errorData.error || 'Analiz başlatılamadı');
+                    throw new Error(errorData.error || 'Analysis could not be started');
                 }
                 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Bir hata oluştu: ' + error.message);
+                alert('An error occurred: ' + error.message);
             }
         });
 
@@ -326,7 +326,7 @@
             };
             
             scanHistory.unshift(scanEntry);
-            if (scanHistory.length > 10) scanHistory.pop(); // Son 10 taramayı tut
+            if (scanHistory.length > 10) scanHistory.pop(); // Keep only the last 10 scans
             
             localStorage.setItem('scanHistory', JSON.stringify(scanHistory));
             updateScanResults();
@@ -343,8 +343,8 @@
                 row.innerHTML = `
                     <td>${scan.domain || '-'}</td>
                     <td>${scan.type}</td>
-                    <td><span class="status completed">Tamamlandı</span></td>
-                    <td>${scan.totalCount} (${scan.activeCount} aktif)</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td>${scan.totalCount} (${scan.activeCount} active)</td>
                     <td>${date}</td>
                     <td>
                         <button class="action-btn view-results" onclick='showResults(${JSON.stringify(scan.results)})'>
@@ -358,11 +358,11 @@
         }
 
         function showResults(results) {
-            console.log('Gösterilecek sonuçlar:', results); // Debug log
+            console.log('Results to be displayed:', results); // Debug log
             
             const container = document.getElementById('resultsContainer');
             
-            // Sonuçları güvenli bir şekilde al, yoksa boş array kullan
+            // Safely retrieve results, use empty array if none
             const activeSubdomains = results.active_subdomains || [];
             const allSubdomains = results.subdomains || [];
             const totalCount = results.total_count || 0;
@@ -371,11 +371,11 @@
             let html = `
                 <div class="results-summary">
                     <div class="result-stat">
-                        <span class="label">Toplam Subdomain:</span>
+                        <span class="label">Total Subdomains:</span>
                         <span class="value">${totalCount}</span>
                     </div>
                     <div class="result-stat">
-                        <span class="label">Aktif Subdomain:</span>
+                        <span class="label">Active Subdomains:</span>
                         <span class="value">${activeCount}</span>
                     </div>
                 </div>
@@ -383,7 +383,7 @@
 
             if (activeSubdomains.length > 0) {
                 html += `
-                    <h3>Aktif Subdomain'ler</h3>
+                    <h3>Active Subdomains</h3>
                     <ul class="subdomain-list active">
                         ${activeSubdomains.map(sub => `<li>${sub}</li>`).join('')}
                     </ul>`;
@@ -391,7 +391,7 @@
 
             if (allSubdomains.length > 0) {
                 html += `
-                    <h3>Tüm Subdomain'ler</h3>
+                    <h3>All Subdomains</h3>
                     <ul class="subdomain-list all">
                         ${allSubdomains.map(sub => `<li>${sub}</li>`).join('')}
                     </ul>`;
@@ -401,13 +401,13 @@
             
             container.innerHTML = html;
             
-            // Modal'ı göster
+            // Show modal
             const modal = document.getElementById('resultsModal');
             modal.style.display = 'block';
             modal.classList.add('show');
         }
 
-        // Modal kapatma işleyicileri
+        // Modal close handlers
         document.querySelectorAll('.close-modal').forEach(button => {
             button.addEventListener('click', () => {
                 const modal = button.closest('.modal');
@@ -418,7 +418,7 @@
             });
         });
 
-        // Loading durumunu güncelleyen fonksiyon ekleyelim
+        // Loading status updater
         function updateLoadingStatus(status, subStatus = '') {
             document.getElementById('loadingStatus').textContent = status;
             document.getElementById('loadingSubStatus').textContent = subStatus;

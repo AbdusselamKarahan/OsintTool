@@ -117,7 +117,7 @@ async function startScan(type, data) {
             updateStats();
             showResults(scanResult);
         } else {
-            throw new Error(result.error || 'Tarama sırasında bir hata oluştu');
+            throw new Error(result.error || 'An error occurred during scanning');
         }
     } catch (error) {
         alert(error.message);
@@ -225,7 +225,7 @@ function showResults(scanId) {
 }
 
 function deleteScan(scanId) {
-    if (confirm('Bu tarama kaydını silmek istediğinizden emin misiniz?')) {
+    if (confirm('Are you sure you want to delete this scan record?')) {
         scanHistory = scanHistory.filter(scan => scan.id !== scanId);
         localStorage.setItem('scanHistory', JSON.stringify(scanHistory));
         updateScanResults();

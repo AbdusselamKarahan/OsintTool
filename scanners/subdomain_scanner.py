@@ -12,7 +12,7 @@ from tqdm import tqdm
 import sys
 import threading
 
-# SSL uyarılarını kapat
+# Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class SubdomainScanner:
@@ -21,22 +21,22 @@ class SubdomainScanner:
         self.tools = {
             'subfinder': self._check_tool_exists('subfinder')
         }
-        self.timeout = 300  # 5 dakika timeout
+        self.timeout = 300  # 5 minutes timeout
         self.session = requests.Session()
         self.session.verify = False
         self.current_tool = None
         self.progress = 0
         
         if not self.tools['subfinder']:
-            print("Uyarı: Subfinder bulunamadı! Lütfen subfinder'ı yükleyin.")
+            print("Warning: Subfinder not found! Please install subfinder.")
 
     def _update_progress(self, tool_name, progress):
-        """İlerleme durumunu günceller"""
+        """Updates the progress status"""
         self.current_tool = tool_name
         self.progress = progress
 
     def _check_tool_exists(self, tool_name):
-        """Aracın sistemde yüklü olup olmadığını kontrol eder"""
+        """Checks if the tool is installed in the system"""
         try:
             if self.is_windows:
                 tool_name = f"{tool_name}.exe"
@@ -48,10 +48,10 @@ class SubdomainScanner:
                                  timeout=10)
             return True
         except subprocess.TimeoutExpired:
-            print(f"Uyarı: {tool_name} zaman aşımına uğradı")
+            print(f"Warning: {tool_name} timed out")
             return False
         except Exception as e:
-            print(f"Uyarı: {tool_name} yüklü değil veya PATH'te bulunamadı. Hata: {str(e)}")
+            print(f"Warning: {tool_name} is not installed or not found in PATH. Error: {str(e)}")
             return False
 
     def _run_subfinder(self, domain):
@@ -60,10 +60,10 @@ class SubdomainScanner:
         
         try:
             self._update_progress("Subfinder", 0)
-            print(f"\nSubfinder taraması başlatılıyor: {domain}")
+            print(f"\nSubfinder scanning started: {domain}")
             
             cmd = f"subfinder -d {domain} -silent"
-            print(f"Çalıştırılan komut: {cmd}")
+            print(f"Executed command: {cmd}")
             
             process = subprocess.Popen(
                 cmd,
@@ -82,31 +82,31 @@ class SubdomainScanner:
                     break
                 if line:
                     line = line.strip()
-                    if line:  # Boş satırları filtrele
-                        print(f"Bulunan subdomain: {line}")  # Debug log
+                    if line:  # Filter out empty lines
+                        print(f"Found subdomain: {line}")  # Debug log
                         output_lines.append(line)
                 
-                # İlerlemeyi güncelle
+                # Update progress
                 elapsed = time.time() - start_time
                 progress = min(95, int((elapsed / 30) * 100))
                 self._update_progress("Subfinder", progress)
             
-            # Hata çıktısını kontrol et
+            # Check for error output
             _, stderr = process.communicate()
             if stderr:
-                print(f"Subfinder hata çıktısı: {stderr}")
+                print(f"Subfinder error output: {stderr}")
             
             subdomains = set(line for line in output_lines if line)
             self._update_progress("Subfinder", 100)
-            print(f"Subfinder {len(subdomains)} subdomain buldu")
+            print(f"Subfinder found {len(subdomains)} subdomains")
             return subdomains
             
         except Exception as e:
-            print(f"Subfinder çalıştırılırken hata: {str(e)}")
+            print(f"Error running Subfinder: {str(e)}")
             return set()
 
     def _validate_domain(self, domain):
-        """Subdomain'in geçerli olup olmadığını kontrol eder"""
+        """Checks if the subdomain is valid"""
         try:
             response = self.session.get(f"http://{domain}", timeout=5)
             return True
@@ -118,17 +118,17 @@ class SubdomainScanner:
                 return False
 
     async def get_total_steps(self, domain):
-        """Toplam adım sayısını döndürür"""
-        return 200  # Subfinder için 100 + aktif domain kontrolü için 100
+        """Returns the total number of steps"""
+        return 200  # 100 for Subfinder + 100 for active domain check
 
     async def scan_with_progress(self, domain):
-        """İlerleme durumunu raporlayarak tarama yapar"""
+        """Reports progress and performs scanning"""
         start_time = time.time()
         all_subdomains = set()
         used_tools = []
         
         try:
-            # Subfinder taraması
+            # Subfinder scanning
             if self.tools['subfinder']:
                 self._update_progress("Subfinder", 0)
                 subfinder_results = self._run_subfinder(domain)
@@ -141,14 +141,14 @@ class SubdomainScanner:
                         'subdomains': list(subfinder_results)
                     }
             
-            # Aktif domain kontrolü
-            self._update_progress("Aktif Domain Kontrolü", 0)
+            # Active domain check
+            self._update_progress("Active Domain Check", 0)
             cleaned_subdomains = {s for s in all_subdomains if s and s.strip()}
             active_subdomains = set()
             total_domains = len(cleaned_subdomains)
             
             if total_domains == 0:
-                print("Hiç subdomain bulunamadı!")  # Debug log
+                print("No subdomains found!")  # Debug log
                 yield {
                     'tool': 'Complete',
                     'active_subdomains': [],
@@ -160,15 +160,15 @@ class SubdomainScanner:
                 }
                 return
             
-            print(f"Toplam {total_domains} subdomain bulundu, aktif kontrol başlıyor...")  # Debug log
+            print(f"Total {total_domains} subdomains found, starting active check...")  # Debug log
             
             for i, subdomain in enumerate(cleaned_subdomains):
-                print(f"Kontrol ediliyor: {subdomain}")  # Debug log
+                print(f"Checking: {subdomain}")  # Debug log
                 if self._validate_domain(subdomain):
-                    print(f"Aktif subdomain bulundu: {subdomain}")  # Debug log
+                    print(f"Found active subdomain: {subdomain}")  # Debug log
                     active_subdomains.add(subdomain)
                 progress = ((i + 1) / total_domains) * 100
-                self._update_progress("Aktif Domain Kontrolü", progress)
+                self._update_progress("Active Domain Check", progress)
                 
                 if (i + 1) % 5 == 0 or (i + 1) == total_domains:
                     yield {
@@ -178,7 +178,7 @@ class SubdomainScanner:
                         'progress': progress
                     }
             
-            # Final sonuçları
+            # Final results
             final_results = {
                 'tool': 'Complete',
                 'active_subdomains': list(active_subdomains),
@@ -188,11 +188,11 @@ class SubdomainScanner:
                 'elapsed_time': time.time() - start_time,
                 'tools_used': used_tools
             }
-            print(f"Tarama tamamlandı: {final_results}")  # Debug log
+            print(f"Scan completed: {final_results}")  # Debug log
             yield final_results
             
         except Exception as e:
-            print(f"Tarama hatası: {str(e)}")
+            print(f"Scan error: {str(e)}")
             yield {
                 'tool': 'Error',
                 'error': str(e),
@@ -200,14 +200,14 @@ class SubdomainScanner:
             }
 
     async def scan(self, domain):
-        """Subdomain taraması yapar"""
+        """Performs subdomain scanning"""
         start_time = time.time()
         all_subdomains = set()
         active_tools = []
         
-        print(f"\nTarama başlatılıyor: {domain}")
+        print(f"\nStarting scan: {domain}")
         
-        # İlerleme monitörünü başlat
+        # Start progress monitor
         progress_thread = threading.Thread(
             target=self._progress_monitor,
             args=(self.timeout,)
@@ -215,23 +215,23 @@ class SubdomainScanner:
         progress_thread.daemon = True
         progress_thread.start()
         
-        # Subfinder ile tarama
+        # Scan with Subfinder
         if self.tools['subfinder']:
             subfinder_results = self._run_subfinder(domain)
             if subfinder_results:
                 active_tools.append("Subfinder")
                 all_subdomains.update(subfinder_results)
 
-        # Sonuçları temizle
+        # Clean results
         cleaned_subdomains = {s for s in all_subdomains if s and s.strip()}
         
-        # Aktif subdomain'leri kontrol et
-        self._update_progress("Aktif Domain Kontrolü", 0)
-        print("\nAktif subdomain'ler kontrol ediliyor...")
+        # Check active subdomains
+        self._update_progress("Active Domain Check", 0)
+        print("\nChecking active subdomains...")
         active_subdomains = set()
         total_domains = len(cleaned_subdomains)
         
-        with tqdm(total=total_domains, desc="Domain kontrolü") as pbar:
+        with tqdm(total=total_domains, desc="Domain check") as pbar:
             with ThreadPoolExecutor(max_workers=10) as executor:
                 future_to_domain = {executor.submit(self._validate_domain, sub): sub for sub in cleaned_subdomains}
                 completed = 0
@@ -246,19 +246,19 @@ class SubdomainScanner:
                     
                     completed += 1
                     progress = int((completed / total_domains) * 100)
-                    self._update_progress("Aktif Domain Kontrolü", progress)
+                    self._update_progress("Active Domain Check", progress)
                     pbar.update(1)
 
         end_time = time.time()
         scan_duration = int(end_time - start_time)
         
-        # Son durumu güncelle
-        self._update_progress("Tamamlandı", 100)
+        # Update final status
+        self._update_progress("Completed", 100)
         
-        print(f"\nTarama tamamlandı!")
-        print(f"Toplam süre: {scan_duration} saniye")
-        print(f"Bulunan toplam subdomain: {len(cleaned_subdomains)}")
-        print(f"Aktif subdomain sayısı: {len(active_subdomains)}")
+        print(f"\nScan completed!")
+        print(f"Total time: {scan_duration} seconds")
+        print(f"Total subdomains found: {len(cleaned_subdomains)}")
+        print(f"Active subdomains: {len(active_subdomains)}")
         
         return {
             "subdomains": sorted(list(cleaned_subdomains)),

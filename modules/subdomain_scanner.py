@@ -20,16 +20,16 @@ class SubdomainScanner:
         """Bir subdomain'in varlığını kontrol eder"""
         domain = f"{subdomain}.{self.target_domain}"
         try:
-            # DNS sorgusu
+            # DNS query
             answers = self.resolver.resolve(domain, 'A')
             if answers:
-                # HTTP erişilebilirlik kontrolü
+                # HTTP accessibility check
                 try:
                     response = requests.get(f"http://{domain}", timeout=2)
                     if response.status_code < 500:
                         return domain
                 except requests.RequestException:
-                    # HTTP erişilemese bile DNS kaydı varsa ekle
+                    # Add even if DNS record exists but HTTP is not accessible
                     return domain
         except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.NoNameservers, 
                 dns.resolver.Timeout, socket.gaierror):
