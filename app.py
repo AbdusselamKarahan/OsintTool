@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, send_file, url_for
 import os
 import json
-from modules.subdomain_scanner import SubdomainScanner
+from scanners.subdomain_scanner import SubdomainScanner
 from modules.directory_scanner import DirectoryScanner
 from modules.js_analyzer import JSAnalyzer
 from config import Config
@@ -16,113 +16,94 @@ Config.init()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+subdomain_scanner = SubdomainScanner()
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/api/scan/subdomains', methods=['POST'])
-def scan_subdomains():
-    data = request.json
-    target_domain = data.get('target_domain')
-    
-    if not target_domain:
-        return jsonify({'error': 'Target domain is required'}), 400
-    
-    # Use reconnaissance tools if on Linux system
-    if platform.system().lower() == 'linux':
-        output_dir = os.path.join(Config.OUTPUT_DIR, target_domain)
-        os.makedirs(output_dir, exist_ok=True)
+async def scan_subdomains():
+    try:
+        data = request.get_json()
+        domain = data.get('target_domain')
         
-        scanner = DirectoryScanner(target_domain, Config.WORDLIST_PATH)
-        recon_results = scanner.run_linux_recon(target_domain, output_dir)
+        if not domain:
+            return jsonify({"error": "Target domain is required"}), 400
         
-        # Read combined results
-        combined_results = []
-        try:
-            with open(os.path.join(output_dir, 'combined_results.txt'), 'r') as f:
-                combined_results = [line.strip() for line in f if line.strip()]
-        except FileNotFoundError:
-            pass
+        logger.info(f"Subdomain taraması başlatılıyor: {domain}")
         
-        return jsonify({
-            'subdomains': combined_results,
-            'recon_results': recon_results,
-            'output_dir': output_dir
-        })
-    
-    # Perform normal subdomain scan if not on Linux
-    scanner = SubdomainScanner(
-        target_domain=target_domain,
-        threads=Config.THREADS,
-        wordlist_path=Config.WORDLIST_PATH
-    )
-    
-    results = scanner.brute_force_subdomains()
-    output_file = os.path.join(Config.OUTPUT_DIR, f"{target_domain}_subdomains.json")
-    scanner.save_results(output_file)
-    
-    return jsonify({
-        'subdomains': results,
-        'output_file': output_file
-    })
+        results = {
+            "subdomains": [],
+            "active_subdomains": [],
+            "total_count": 0,
+            "active_count": 0,
+            "scan_time": 0
+        }
+        
+        async for result in subdomain_scanner.scan_with_progress(domain):
+            if result['tool'] == 'Complete':
+                return jsonify(result)
+            elif result['tool'] == 'Error':
+                return jsonify({"error": result['error']}), 500
+            elif 'subdomains' in result:
+                results["subdomains"].extend(result['subdomains'])
+            elif 'active_count' in result:
+                results["active_count"] = result['active_count']
+                results["total_count"] = result['total_count']
+        
+        return jsonify(results)
+        
+    except Exception as e:
+        logger.error(f"Tarama hatası: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/scan/directories', methods=['POST'])
-def scan_directories():
-    try:
-        data = request.json
-        target_url = data.get('target_url')
-        
-        if not target_url:
-            return jsonify({'error': 'Target URL is required'}), 400
-        
-        scanner = DirectoryScanner(
-            target_url=target_url,
-            wordlist_path=Config.DIR_WORDLIST,
-            threads=Config.THREADS,
-            timeout=Config.TIMEOUT
-        )
-        
-        # Get or create event loop
-        try:
-            loop = asyncio.get_event_loop()
-        except RuntimeError:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-        
-        # Run async scan
-        results = loop.run_until_complete(scanner.scan_directories())
-        
-        output_file = os.path.join(Config.OUTPUT_DIR, f"{target_url.replace('://', '_').replace('/', '_')}_dirs.json")
-        scanner.save_results(output_file)
-        
-        return jsonify({
-            'directories': results,
-            'output_file': output_file
-        })
-    except Exception as e:
-        logger.error(f"Directory scanning error: {str(e)}")
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/analyze/js', methods=['POST'])
-def analyze_js():
-    data = request.json
+async def scan_directories():
+    data = request.get_json()
     target_url = data.get('target_url')
     
     if not target_url:
         return jsonify({'error': 'Target URL is required'}), 400
     
-    analyzer = JSAnalyzer(target_url)
-    js_files = analyzer.extract_js_files()
-    analysis = analyzer.analyze_js_content()
+    scanner = DirectoryScanner(
+        target_url=target_url,
+        wordlist_path=Config.DIR_WORDLIST,
+        threads=Config.THREADS,
+        timeout=Config.TIMEOUT
+    )
     
-    output_file = os.path.join(Config.OUTPUT_DIR, f"{target_url.replace('://', '_').replace('/', '_')}_js.json")
-    analyzer.save_results(output_file)
+    try:
+        results = await scanner.scan_directories()
+        return jsonify({
+            'directories': results,
+            'total_count': len(results)
+        })
+    except Exception as e:
+        logger.error(f"Dizin tarama hatası: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/analyze/js', methods=['POST'])
+def analyze_js():
+    data = request.get_json()
+    target_url = data.get('target_url')
     
-    return jsonify({
-        'js_files': js_files,
-        'analysis': analysis,
-        'output_file': output_file
-    })
+    if not target_url:
+        return jsonify({'error': 'Target URL is required'}), 400
+    
+    try:
+        analyzer = JSAnalyzer(target_url)
+        js_files = analyzer.extract_js_files()
+        analysis = analyzer.analyze_js_content()
+        
+        return jsonify({
+            'js_files': js_files,
+            'analysis': analysis,
+            'total_files': len(js_files)
+        })
+    except Exception as e:
+        logger.error(f"JS analiz hatası: {str(e)}")
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/results/<path:filename>')
 def get_results(filename):

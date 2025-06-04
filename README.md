@@ -117,20 +117,39 @@ python cli.py js-scan --url https://example.com --deep
 
 ### Example Workflow
 
-1. Start with Subdomain Scanning:
+1.Run all scans:
 ```bash
-python cli.py sub-scan --domain target.com
+   python osint_cli.py -t example.com -m all
 ```
 
-2. Scan discovered subdomains for directories:
+2. Subdomain scan only:
 ```bash
-python cli.py dir-scan --url https://sub.target.com
+   python osint_cli.py -t example.com -m subdomains
 ```
 
-3. Analyze JavaScript files on found directories:
+3. Directory scan only:
 ```bash
-python cli.py js-scan --url https://sub.target.com/admin
+   python osint_cli.py -t example.com -m dirs
 ```
+
+4. JavaScript analysis only:
+```bash
+   python osint_cli.py -t example.com -m js
+```
+
+5. Custom wordlist:
+```bash 
+   python osint_cli.py -t example.com -m all -w custom_wordlist.txt
+```
+6. Thread count:
+```bash
+   python osint_cli.py -t example.com -m all --threads 20
+```
+7. Custom output directory:
+ ```bash
+   python osint_cli.py -t example.com -m all -o /path/to/output
+```
+
 
 ### Best Practices
 
