@@ -102,18 +102,6 @@ The web interface will be available at `http://127.0.0.1:5000`
 
 ### Command Line Usage
 
-You can also use the tools via command line:
-
-```bash
-# Directory Scanner
-python cli.py dir-scan --url https://example.com --wordlist wordlists/directories.txt
-
-# Subdomain Scanner
-python cli.py sub-scan --domain example.com --output results/output.json
-
-# JavaScript Analyzer
-python cli.py js-scan --url https://example.com --deep
-```
 
 ### Example Workflow
 
