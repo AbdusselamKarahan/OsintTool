@@ -244,3 +244,11 @@ This tool is for educational purposes only. Ensure you have permission to test a
 ## 📞 Contact
 
 If you have any questions or suggestions, please open an issue or contact us at [abdusselamkrhn@gmail.com]
+
+## 📚 Sources / References
+- [Subfinder](https://github.com/projectdiscovery/subfinder)
+- [OSINT Framework](https://osintframework.com)
+- [The Harvester](https://github.com/laramies/theHarvester)
+- [OSINT Curious Blog](https://www.osintcurio.us)
+- [Open Source Intelligence Techniques – Michael Bazzell](https://www.intelltechniques.com/book1.html)
+- [Bellingcat OSINT Resources](https://www.bellingcat.com/resources/how-tos/)
