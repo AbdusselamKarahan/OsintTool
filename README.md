@@ -38,7 +38,7 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/AbdusselamKarahan/OsintTool.git
+git clone https://github.com/AbdusselamKarahan/OSINT_Ninja.git
 cd OSINT_Ninja
 ```
 
