@@ -30,12 +30,11 @@ A powerful web reconnaissance tool that helps security researchers and penetrati
 
 ## 🛠️ Installation
 
+### Prerequisites
+- Python 3.8 or higher
+- Git
 
-### Command Line Interface
-
-```bash
-python osint_cli.py --help
-```
+### Automatic Installation (Recommended)
 
 1. Clone the repository:
 ```bash
@@ -43,17 +42,53 @@ git clone https://github.com/AbdusselamKarahan/OsintTool.git
 cd OSINT_Ninja
 ```
 
-2. Install the required dependencies:
+2. Run the setup script:
 ```bash
-pip install -r requirements.txt
+python setup.py
 ```
 
-3. Run the application:
+The setup script will:
+- Install Go (if not installed)
+- Install Subfinder
+- Create a Python virtual environment
+- Install all required Python dependencies
+
+3. Activate the virtual environment:
+- On Windows:
+  ```bash
+  .\venv\Scripts\activate
+  ```
+- On Linux/macOS:
+  ```bash
+  source venv/bin/activate
+  ```
+
+4. Run the application:
 ```bash
 python app.py
 ```
 
 The web interface will be available at `http://127.0.0.1:5000`
+
+### Manual Installation (Advanced)
+
+If you prefer to install components manually:
+
+1. Install Go from https://golang.org/dl/
+2. Install Subfinder:
+```bash
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+```
+
+3. Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the application:
+```bash
+python app.py
+```
 
 ## 📚 Usage
 
