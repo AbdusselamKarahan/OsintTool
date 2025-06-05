@@ -40,7 +40,7 @@ python osint_cli.py --help
 1. Clone the repository:
 ```bash
 git clone https://github.com/AbdusselamKarahan/OsintTool.git
-cd OsintTool
+cd OSINT_Ninja
 ```
 
 2. Install the required dependencies:
