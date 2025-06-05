@@ -56,13 +56,14 @@ def install_system_dependencies():
     
     if system == 'linux':
         if not is_root():
-            print("Error: This script needs root privileges to install system dependencies.")
-            print("Please run with sudo.")
+            print("\n⚠️ Error: Root privileges required!")
+            print("Please run the script with sudo:")
+            print("sudo python3 setup.py")
             sys.exit(1)
             
         try:
             # Update package lists
-            print("Updating package lists...")
+            print("\n📦 Updating package lists...")
             subprocess.run(['apt-get', 'update'], check=True)
             
             # Install required packages
@@ -77,39 +78,75 @@ def install_system_dependencies():
                 'git'
             ]
             
-            print("Installing system dependencies...")
-            subprocess.run(['apt-get', 'install', '-y'] + packages, check=True)
+            print("\n📥 Installing system dependencies...")
+            
+            # Try installing packages one by one
+            for package in packages:
+                try:
+                    print(f"Installing {package}...")
+                    subprocess.run(['apt-get', 'install', '-y', package], 
+                                check=True,
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE)
+                except subprocess.CalledProcessError as e:
+                    print(f"\n❌ Failed to install {package}")
+                    print("\nPossible solutions:")
+                    print("1. Check your internet connection")
+                    print("2. Update your system:")
+                    print("   sudo apt-get update && sudo apt-get upgrade")
+                    print("3. Try installing the package manually:")
+                    print(f"   sudo apt-get install {package}")
+                    print("\nError details:", e.stderr.decode())
+                    sys.exit(1)
+            
+            print("\n✅ All system dependencies installed successfully!")
             
         except subprocess.CalledProcessError as e:
-            print(f"Error installing system dependencies: {e}")
-            print("Please install the following packages manually:")
-            print("- golang-go")
-            print("- python3-dev")
-            print("- python3-pip")
-            print("- python3-venv")
-            print("- build-essential")
-            print("- libssl-dev")
-            print("- libffi-dev")
-            print("- git")
+            print("\n❌ Error during system dependencies installation")
+            print("\nThis might be due to:")
+            print("1. No internet connection")
+            print("2. APT package manager is locked")
+            print("3. Repository issues")
+            print("\nTry these steps:")
+            print("1. Check your internet connection")
+            print("2. Wait a few minutes if system is updating")
+            print("3. Run these commands manually:")
+            print("   sudo apt-get update")
+            for package in packages:
+                print(f"   sudo apt-get install -y {package}")
+            print("\nError details:", e.stderr.decode() if hasattr(e, 'stderr') else str(e))
             sys.exit(1)
-    
+            
     elif system == 'darwin':  # macOS
         try:
             # Check if Homebrew is installed
             if not is_tool_installed('brew'):
-                print("Installing Homebrew...")
-                subprocess.run(['/bin/bash', '-c', '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'], check=True)
+                print("\n📦 Installing Homebrew...")
+                install_cmd = '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+                subprocess.run(install_cmd, shell=True, check=True)
             
             # Install required packages
-            print("Installing system dependencies...")
-            subprocess.run(['brew', 'install', 'go', 'git', 'python3'], check=True)
+            print("\n📥 Installing system dependencies...")
+            packages = ['go', 'git', 'python3']
+            
+            for package in packages:
+                try:
+                    print(f"Installing {package}...")
+                    subprocess.run(['brew', 'install', package], check=True)
+                except subprocess.CalledProcessError as e:
+                    print(f"\n❌ Failed to install {package}")
+                    print("\nTry installing manually:")
+                    print(f"brew install {package}")
+                    sys.exit(1)
+                    
+            print("\n✅ All system dependencies installed successfully!")
             
         except subprocess.CalledProcessError as e:
-            print(f"Error installing system dependencies: {e}")
-            print("Please install the following packages manually:")
-            print("- go")
-            print("- git")
-            print("- python3")
+            print("\n❌ Error installing system dependencies")
+            print("\nPlease try installing manually:")
+            print("1. Install Homebrew: https://brew.sh")
+            print("2. Then run:")
+            print("   brew install go git python3")
             sys.exit(1)
 
 def install_go():
