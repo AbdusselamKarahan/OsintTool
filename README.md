@@ -1,6 +1,6 @@
 # Osint Ninja 🥷
 
-<img src="static/background.png" alt="OsintTool Banner" width="600"/>
+<img aling="center" src="static/background.png" alt="OsintTool Banner" width="300"/>
 
 A powerful web reconnaissance tool that helps security researchers and penetration testers gather information about web applications. OsintTool combines multiple scanning capabilities into a user-friendly interface.
 
